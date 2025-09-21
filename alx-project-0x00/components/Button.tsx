@@ -1,25 +1,14 @@
+// components/Button.tsx
+
 import React from "react";
 import { ButtonProps } from "@/interfaces";
 
-const Button: React.FC<ButtonProps> = ({ title, size = "medium", shape = "rounded-md" }) => {
-  // Define size classes
-  const sizeClasses = {
-    small: "px-2 py-1 text-sm",
-    medium: "px-4 py-2 text-base",
-    large: "px-6 py-3 text-lg",
-  };
-
-  // Define shape classes
-  const shapeClasses = {
-    "rounded-sm": "rounded-sm",
-    "rounded-md": "rounded-md",
-    "rounded-lg": "rounded-lg",
-    "rounded-full": "rounded-full",
-  };
-
+// The component now destructures 'title' and 'styles' from props
+const Button: React.FC<ButtonProps> = ({ title, styles }) => {
   return (
     <button
-      className={`bg-blue-500 text-white ${sizeClasses[size]} ${shapeClasses[shape]} shadow-md hover:bg-blue-600 transition-colors`}
+      // The styles prop is now used directly in the className
+      className={`bg-blue-500 text-white shadow-md hover:bg-blue-600 ${styles}`}
     >
       {title}
     </button>
