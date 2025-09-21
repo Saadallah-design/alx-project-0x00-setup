@@ -18,6 +18,7 @@ const Landing: React.FC = () => {
       <div className="flex items-center space-x-4 mb-4">
         <Button title="Small Rounded" styles="px-2 py-1 text-sm rounded-sm" />
         <Button title="Medium Rounded" styles="px-4 py-2 text-base rounded-md" />
+        <Button title="Large Rounded" styles="px-5 py-2.5 text-lg rounded-lg" />
         <Button title="Large Full" styles="px-6 py-3 text-lg rounded-full" />
       </div>
     </div>
